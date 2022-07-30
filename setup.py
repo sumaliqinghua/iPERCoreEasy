@@ -15,45 +15,46 @@ PIP_VERSION = "20.2.4"
 
 
 #                        cuda
-# torch 1.8.1       +cu101     +cu102      +cu111
-# torch 1.8.0       +cu101      cu102      +cu111
+# torch 1.12.0       +cu101     +cu102      +cu116
+# torch 1.8.0       +cu101      cu102      +cu116
 # torch 1.7.1       +cu101      cu102      +cu110
 # torch 1.7.0       +cu101      cu102      +cu110
 # torch 1.6.0       +cu101      cu102
 
-VALID_CUDA = [10.1, 10.2, 11.0, 11.1]
+VALID_CUDA = [10.1, 10.2, 11.0, 11.6]
 
 DEFAULT_LINUX_CUDA_TORCH = {
-    "cu111": "1.8.1",
+    "cu116": "1.12.0",
     "cu110": "1.7.0",
     "cu102": "1.7.0",
     "cu101": "1.7.0"
 }
 
 DEFAULT_WINDOWS_CUDA_TORCH = {
+    "cu116": "1.12.0",
     "cu102": "1.6.0",
     "cu101": "1.6.0"
 }
 
 
 PRECOMPILED_TORCH_CUDA_PAIRS = {
-    "1.8.1+cu111": {
-        "torch": "1.8.1+cu111",
-        "torchvision": "0.9.1+cu111",
-        "mmcv-full": "1.2.0",
-        "mmcv-dist": f"{MMCV_DIST}/cu111/torch1.8.1/index.html"
+    "1.12.0+cu116": {
+        "torch": "1.12.0+cu116",
+        "torchvision": "0.13.+cu116",
+        "mmcv-full": "1.6.1",
+        "mmcv-dist": f"{MMCV_DIST}/cu116/torch1.12.0/index.html"
     },
-    "1.8.1+cu102": {
-        "torch": "1.8.1+cu102",
+    "1.12.0+cu102": {
+        "torch": "1.12.0+cu102",
         "torchvision": "0.9.1+cu102",
         "mmcv-full": "1.2.0",
-        "mmcv-dist": f"{MMCV_DIST}/cu102/torch1.8.1/index.html"
+        "mmcv-dist": f"{MMCV_DIST}/cu102/torch1.12.0/index.html"
     },
-    "1.8.1+cu101": {
-        "torch": "1.8.1+cu101",
+    "1.12.0+cu101": {
+        "torch": "1.12.0+cu101",
         "torchvision": "0.9.1+cu101",
         "mmcv-full": "1.2.0",
-        "mmcv-dist": f"{MMCV_DIST}/cu101/torch1.8.1/index.html"
+        "mmcv-dist": f"{MMCV_DIST}/cu101/torch1.12.0/index.html"
     },
     "1.7.0+cu110": {
         "torch": "1.7.0+cu110",
@@ -104,6 +105,12 @@ WINDOWS_PRECOMPILED_TORCH_CUDA_PAIRS = {
         "torchvision": "https://download.pytorch.org/whl/cu101/torchvision-0.7.0%2Bcu101-cp{PYTHON_VERSION}-cp{PYTHON_ABI_VERSION}-win_amd64.whl",
         "mmcv-full": "1.1.5",
         "mmcv-dist": f"{MMCV_DIST}/cu101/torch1.6.0/index.html"
+    },
+    "1.12.0+cu116": {
+        "torch": "https://download.pytorch.org/whl/cu101/torch-1.12.0%2Bcu116-cp{PYTHON_VERSION}-cp{PYTHON_ABI_VERSION}-win_amd64.whl",
+        "torchvision": "https://download.pytorch.org/whl/cu116/torchvision-0.13.0%2Bcu116-cp{PYTHON_VERSION}-cp{PYTHON_ABI_VERSION}-win_amd64.whl",
+        "mmcv-full": "1.6.1",
+        "mmcv-dist": f"{MMCV_DIST}/cu6/torch1.12.0/index.html"
     }
 }
 
